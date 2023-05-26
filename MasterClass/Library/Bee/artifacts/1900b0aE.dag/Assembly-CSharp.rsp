@@ -367,6 +367,9 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scenes/Scripts/CadenasDeTexto.cs"
+"Assets/Scenes/Scripts/MetodoYFuncion.cs"
+"Assets/Scenes/Scripts/Operadores.cs"
 "Assets/Scenes/Scripts/Variables.cs"
 -langversion:9.0
 
