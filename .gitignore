@@ -92,3 +92,10 @@ crashlytics-build.properties
 /MasterClass/Library/Bee/TundraBuildState.state.map
 /MasterClass/Library/ScriptAssemblies/Assembly-CSharp.dll
 /MasterClass/Library/Search/transactions.db
+/MasterClass/Library/ArtifactDB
+/MasterClass/Library/EditorInstance.json
+/MasterClass/Library/SourceAssetDB
+/MasterClass/Logs/AssetImportWorker0.log
+/MasterClass/Logs/AssetImportWorker1.log
+/MasterClass/Logs/shadercompiler-UnityShaderCompiler.exe0.log
+/MasterClass/UserSettings/Layouts/default-2021.dwlt
