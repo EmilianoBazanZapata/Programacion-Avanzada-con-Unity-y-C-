@@ -1,5 +1,12 @@
 using UnityEngine;
-
+public enum AttackType
+{
+    None,
+    Fire,
+    Ice,
+    Sword,
+    Punch
+}
 public class TipoEnum : MonoBehaviour
 {
     // 0 = fire
@@ -8,14 +15,14 @@ public class TipoEnum : MonoBehaviour
     // 3 = punch
     public int attackTypeInt;
 
-    public enum AttackType
-    {
-        None,
-        Fire,
-        Ice,
-        Sword,
-        Punch
-    }
+    //public enum AttackType
+    //{
+    //    None,
+    //    Fire,
+    //    Ice,
+    //    Sword,
+    //    Punch
+    //}
 
     public AttackType attackEnum;
 
