@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public string title;
-    public int damage;
-    public float health;
+    [Header("Enemy")]
+    private string _title;
+    [SerializeField] protected int damage;
+    [SerializeField] protected float health;
+
+    //permite dividir el get y el set
+    public string Title { get { return _title; } set => _title = value; }
 
     private void Start()
     {
@@ -13,11 +17,11 @@ public class Enemy : MonoBehaviour
 
     public virtual void Attack()
     {
-        Debug.Log($"Enemy '{title}' ATTACK. Damage: '{damage}'");
+        Debug.Log($"Enemy '{_title}' ATTACK. Damage: '{damage}'");
     }
 
     private void OnDestroy()
     {
-        Debug.Log($"Enemy '{title}' DEFENSE. Health '{health}'");
+        Debug.Log($"Enemy '{_title}' DEFENSE. Health '{health}'");
     }
 }
