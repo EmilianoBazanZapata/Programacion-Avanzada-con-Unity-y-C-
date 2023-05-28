@@ -8,10 +8,10 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        
+        Attack();
     }
 
-    private void Attack() 
+    public virtual void Attack()
     {
         Debug.Log($"Enemy '{title}' ATTACK. Damage: '{damage}'");
     }
