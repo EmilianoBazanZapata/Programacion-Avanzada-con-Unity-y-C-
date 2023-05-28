@@ -10,4 +10,9 @@ public class EnemyOrc : Enemy
 
         Debug.Log($"{health}");
     }
+
+    public override void Defense()
+    {
+        Debug.Log($"Enemy '{_title}' DEFENSE. Health '{health}'");
+    }
 }
