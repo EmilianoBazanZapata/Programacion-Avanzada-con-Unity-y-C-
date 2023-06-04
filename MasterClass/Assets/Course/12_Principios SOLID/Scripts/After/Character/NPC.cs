@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Course.SOLID.After
 {
-    public class NPC : Character, IInteract
+    public class NPC : MonoBehaviour, IInteract
     {
         private IHeal otherCharacter;
 

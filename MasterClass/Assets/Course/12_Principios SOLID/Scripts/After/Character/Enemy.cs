@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Course.SOLID.After
 {
-    public class Enemy : Character, IDamage
+    public class Enemy : MonoBehaviour, IDamage
     {
         public void Damage(int value)
         {
