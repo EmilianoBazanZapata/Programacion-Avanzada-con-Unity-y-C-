@@ -5,22 +5,22 @@ namespace MasterClass.Assets.Scenes.Scripts.Patrones.Mediator
     public class MenuMediator : MonoBehaviour
     {
         public Menu[] menus;
-        // 0 - MainMenu
+        // 0 - Main Menu
         // 1 - Play
         // 2 - Settings
         // 3 - Exit
 
         public int currentIndex = 0;
-        public int latsIndex = 0;
+        public int lastIndex = 0;
 
         private void ChangeMenu(int index)
         {
             currentIndex = index;
 
-            menus[latsIndex].Hide();
+            menus[lastIndex].Hide();
             menus[currentIndex].Show();
 
-            latsIndex = currentIndex;
+            lastIndex = currentIndex;
         }
 
         public void GoToMainMenu()
@@ -42,5 +42,9 @@ namespace MasterClass.Assets.Scenes.Scripts.Patrones.Mediator
         {
             ChangeMenu(3);
         }
+
+
+
+
     }
 }

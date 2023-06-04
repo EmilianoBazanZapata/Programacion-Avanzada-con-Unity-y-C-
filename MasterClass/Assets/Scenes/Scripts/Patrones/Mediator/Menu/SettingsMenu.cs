@@ -1,6 +1,7 @@
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace MasterClass.Assets.Scenes.Scripts.Patrones.Mediator.Menu
+namespace MasterClass.Assets.Scenes.Scripts.Patrones.Mediator
 {
     public class SettingsMenu : Menu
     {
@@ -11,7 +12,7 @@ namespace MasterClass.Assets.Scenes.Scripts.Patrones.Mediator.Menu
 
         private void Start()
         {
-            backBtn.onClick.AddListener(() => mediator.GoToMainMenu);
+            backBtn.onClick.AddListener(() => mediator.GoToMainMenu());
         }
     }
 }

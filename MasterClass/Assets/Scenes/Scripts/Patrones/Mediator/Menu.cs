@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MasterClass.Assets.Scenes.Scripts.Patrones.Mediator
 {
-    public class Menu : MonoBehaviour
+    public abstract class Menu : MonoBehaviour
     {
         public MenuMediator mediator;
 
