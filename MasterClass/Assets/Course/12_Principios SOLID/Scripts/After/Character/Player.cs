@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,7 +8,6 @@ namespace Course.SOLID.After
         public int health = 100;
         public Item currentItem;
         public UnityEvent<int> OnUpdateHealth;
-
         private IInteract otherCharacter;
 
         private void Start()
