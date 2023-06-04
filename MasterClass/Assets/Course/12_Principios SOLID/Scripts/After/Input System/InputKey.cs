@@ -4,12 +4,11 @@ namespace Course.SOLID.After
 {
     public class InputKey : InputHandler
     {
-        public KeyCode keyLeft = KeyCode.LeftArrow;
+        public KeyCode keyLefth = KeyCode.LeftArrow;
         public KeyCode keyRight = KeyCode.RightArrow;
-
-        public override float GetAxisHorizontal()
+        public override float GetAxistHorizontal()
         {
-            if (Input.GetKey(keyLeft))
+            if (Input.GetKey(keyLefth))
             {
                 return -1;
             }
@@ -18,7 +17,6 @@ namespace Course.SOLID.After
             {
                 return 1;
             }
-
             return 0;
         }
     }

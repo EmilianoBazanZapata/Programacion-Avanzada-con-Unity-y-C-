@@ -4,7 +4,6 @@ namespace Course.SOLID.After
 {
     public abstract class InputHandler : MonoBehaviour
     {
-        public abstract float GetAxisHorizontal();
-    
+        public abstract float GetAxistHorizontal();
     }
 }

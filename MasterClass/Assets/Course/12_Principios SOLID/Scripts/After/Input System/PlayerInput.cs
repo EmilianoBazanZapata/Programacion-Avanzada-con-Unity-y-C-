@@ -9,24 +9,22 @@ namespace Course.SOLID.After
         [Space]
         public float speedMovement = 15f;
         [Space]
-        public UnityEvent OnInteract;
-        public UnityEvent OnConsumeItem;
+        public UnityEvent onInteract;
+        public UnityEvent onConsumeItem;
 
         private void Update()
         {
-            // Movement
             ActionMovement();
 
-            // Interaction
             ActionInteraction();
 
-            // Consume Item
-            ActionConsumeItem();
+            ActiionConsumeItem();
         }
 
         private void ActionMovement()
         {
-            float inputHorizontal = inputHandler.GetAxisHorizontal();
+            // Movement
+            float inputHorizontal = inputHandler.GetAxistHorizontal();
 
             Vector3 direction = new Vector3(inputHorizontal, 0, 0);
 
@@ -35,19 +33,20 @@ namespace Course.SOLID.After
 
         private void ActionInteraction()
         {
+            // Interaction
             if (Input.GetKeyDown(KeyCode.E))
             {
-                OnInteract.Invoke();
+                onInteract.Invoke();
             }
         }
 
-        private void ActionConsumeItem()
+        private void ActiionConsumeItem()
         {
+            // Consume Item
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                OnConsumeItem.Invoke();
+               onConsumeItem.Invoke();
             }
         }
-
     }
 }

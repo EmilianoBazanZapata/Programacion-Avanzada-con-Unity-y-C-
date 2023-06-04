@@ -22,42 +22,6 @@ namespace Course.SOLID.Before
             healthTxt.text = "Health: " + health.ToString();
         }
 
-        private void Update()
-        {
-            // Movement
-            float inputHorizontal = Input.GetAxis("Horizontal");
-
-            Vector3 direction = new Vector3(inputHorizontal, 0, 0);
-
-            transform.Translate(direction * speedMovement * Time.deltaTime);
-
-            // Interaction
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (otherCharacter != null)
-                {
-                    otherCharacter.Interact();
-                }
-            }
-
-            // Consume Item
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (currentItem != null)
-                {
-                    if (currentItem is ItemWeapon)
-                    {
-                        Debug.Log($"{currentItem.itemName}: Shoot!");
-                    }
-                    else if (currentItem is ItemPotion)
-                    {
-                        Debug.Log($"{currentItem.itemName}: Drink to get more power!");
-                    }
-                }
-            }
-
-        }
-
         #region Interface
 
         public void Damage(int value)
@@ -96,5 +60,27 @@ namespace Course.SOLID.Before
             otherCharacter = null;
         }
 
+        public void ActionInteraction()
+        {
+            if (otherCharacter != null)
+            {
+                otherCharacter.Interact();
+            }
+        }
+
+        public void ActionConsumeItem()
+        {
+            if (currentItem != null)
+            {
+                if (currentItem is ItemWeapon)
+                {
+                    Debug.Log($"{currentItem.itemName}: Shoot!");
+                }
+                else if (currentItem is ItemPotion)
+                {
+                    Debug.Log($"{currentItem.itemName}: Drink to get more power!");
+                }
+            }
+        }
     }
 }
