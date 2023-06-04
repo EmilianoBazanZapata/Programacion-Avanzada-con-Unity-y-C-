@@ -1,3 +1,4 @@
+using MasterClass.Assets.Scenes.Scripts.Patrones.Singleton;
 using UnityEngine;
 
 namespace MasterClass.Assets.Scenes.Scripts.Patrones.Adapter
@@ -9,6 +10,8 @@ namespace MasterClass.Assets.Scenes.Scripts.Patrones.Adapter
         private void Start()
         {
             saveSystem = new SaveSystem( new PlayerPrefsAdapter());
+            
+            PlayerPrefsSingleton.Instance.GetInt("asdf",12);
         }
     }
 }

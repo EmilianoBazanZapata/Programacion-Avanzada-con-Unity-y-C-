@@ -2,17 +2,17 @@ using UnityEngine;
 
 namespace MasterClass.Assets.Scenes.Scripts.Patrones.Singleton
 {
-    public class PlayerPrefsAdapter : MonoBehaviour, IDataSaver
+    public class PlayerPrefsSingleton : MonoBehaviour, IDataSaver
     {
         #region Singleton
-        private static PlayerPrefsAdapter _instance;
-        public static PlayerPrefsAdapter Instance
+        private static PlayerPrefsSingleton _instance;
+        public static PlayerPrefsSingleton Instance
         {
             get
             {
                 if (!_instance)
                 {
-                    Debug.LogWarningFormat("Acceaing {0} before its Awake phase", typeof(PlayerPrefsAdapter).Name);
+                    Debug.LogWarningFormat("Acceaing {0} before its Awake phase", typeof(PlayerPrefsSingleton).Name);
                 }
                 return _instance;
             }
@@ -20,9 +20,9 @@ namespace MasterClass.Assets.Scenes.Scripts.Patrones.Singleton
 
         private void Awake()
         {
-            if (_instance != null && _instance != this || FindObjectsOfType<PlayerPrefsAdapter>().Length > 1)
+            if (_instance != null && _instance != this || FindObjectsOfType<PlayerPrefsSingleton>().Length > 1)
             {
-                Debug.LogWarningFormat("Please make sure there is only one {0} in the scene", typeof(PlayerPrefsAdapter).Name);
+                Debug.LogWarningFormat("Please make sure there is only one {0} in the scene", typeof(PlayerPrefsSingleton).Name);
                 Destroy(this);
                 return;
             }
