@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Course.SOLID.After
 {
-    public class Enemy : MonoBehaviour, IDamage
+    public class Enemy : Character, IDamage
     {
         public void Damage(int value)
         {

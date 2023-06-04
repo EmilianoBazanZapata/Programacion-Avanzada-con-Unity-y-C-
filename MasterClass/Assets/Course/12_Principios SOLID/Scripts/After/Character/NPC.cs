@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Course.SOLID.After
 {
-    public class NPC : MonoBehaviour, IInteract
+    public class NPC : Character, IInteract
     {
         private IHeal otherCharacter;
 
