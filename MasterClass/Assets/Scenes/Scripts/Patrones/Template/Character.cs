@@ -8,7 +8,7 @@ namespace MasterClass.Assets.Scenes.Scripts.Patrones.Template
 
         public void Attack()
         {
-            if (CanAttack)
+            if ((CanAttack()))
             {
                 DoAttack();
             }
