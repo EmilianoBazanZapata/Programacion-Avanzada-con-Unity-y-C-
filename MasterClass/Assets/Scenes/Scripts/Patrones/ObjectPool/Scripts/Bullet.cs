@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class Bullet : MonoBehaviour
+using System;
+namespace MasterClass.Assets.Scenes.Scripts.Patrones.ObjectPool.Scripts
 {
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(Rigidbody))]
+    public class Bullet : MonoBehaviour
     {
-        
-    }
+        private float speed = 10;
+        private Action<Bullet> OnKill;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Init(Action<Bullet> actionKill)
+        {
+            OnKill = actionKill;
+
+            Rigidbody rigidbody = GetComponent<Rigidbody>();
+            rigidbody.velocity = transform.forward * speed;
+        }
+
+        private  void OnCollisionEnter(Collision collision)
+        {
+            if(collision.gameObject.CompareTag("Wall"))
+            {
+                OnKill(this);
+            }
+        }
     }
 }
